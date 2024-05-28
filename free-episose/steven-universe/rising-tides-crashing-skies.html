@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Episode</title>
+    <style>
+        /* CSS for theme selection */
+        .theme-selector {
+            margin-bottom: 20px;
+        }
+        /* CSS for video container */
+        .video-container {
+            margin-bottom: 20px;
+        }
+        /* CSS for small text message */
+        .message {
+            font-size: 14px;
+            color: #888;
+        }
+        /* Additional styles for different themes */
+        body.light-red { background-color: #ffcccc; color: #000000; }
+        body.dark-red { background-color: #990000; color: #ffffff; }
+        body.gray-red { background-color: #cccccc; color: #000000; }
+        body.light-blue { background-color: #cce6ff; color: #000000; }
+        body.dark-blue { background-color: #004080; color: #ffffff; }
+        body.gray-blue { background-color: #99ccff; color: #000000; }
+    </style>
+</head>
+<body>
+    <!-- Theme selection -->
+    <div class="theme-selector">
+        <label for="theme">Choose a theme:</label>
+        <select id="theme" onchange="changeTheme(this.value)">
+            <option value="light-red">Light Red</option>
+            <option value="dark-red">Dark Red</option>
+            <option value="gray-red">Gray Red</option>
+            <option value="light-blue">Light Blue</option>
+            <option value="dark-blue">Dark Blue</option>
+            <option value="gray-blue">Gray Blue</option>
+        </select>
+    </div>
+
+    <!-- Embedded video -->
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Small text message -->
+    <p class="message">Enjoy your free episode!</p>
+
+    <script>
+        // JavaScript function to change theme
+        function changeTheme(theme) {
+            document.body.className = theme;
+        }
+    </script>
+</body>
+</html>
